@@ -485,12 +485,10 @@ var app = {
 	      var text = "a\r";
 	  break;
           case "All-Off":
-		alert("All-off not set");
-	      //var text = "9\r";
+	      var text = "d\r";
 	  break;
 	  case "All-On":
-		alert("All-on not set");
-	      //var text = "a\r";
+	      var text = "e\r";
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ alert("Success Command: "+text); }, function(){ alert("Failed Command: "+text); });
