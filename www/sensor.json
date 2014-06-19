@@ -20,7 +20,7 @@
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
-	"order": "c",
+	"order": "a",
       	"id": "3"
   },
   {
@@ -28,7 +28,7 @@
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
-	"order": "a",
+	"order": "b",
       	"id": "4"
   },
   {
@@ -36,7 +36,7 @@
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
-	"order": "b",
+	"order": "a",
       	"id": "5"
   },
   {
@@ -44,7 +44,7 @@
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
-	"order": "c",
+	"order": "b",
       	"id": "6"
   },
   {
