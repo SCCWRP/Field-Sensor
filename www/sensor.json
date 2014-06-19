@@ -40,5 +40,12 @@
       	"type": "button",
       	"status": "incomplete",
       	"id": "6"
+  },
+  {
+	"title": "All",
+	"action": "sensorControl",
+      	"type": "button",
+      	"status": "incomplete",
+      	"id": "7"
   }
 ]

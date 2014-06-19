@@ -241,8 +241,8 @@
 		$(this.el).unbind("vclick");
 	},
         events: {
-		//'vclick .ui-flipswitch' : 'showSensor'
-		'vclick #sensor' : 'showSensor'
+		//'vclick #sensor' : 'showSensor'
+		'tap #sensor' : 'showSensor'
 	},
         showSensor: function(e){
 		e.preventDefault();
@@ -484,6 +484,14 @@ var app = {
 	  break;
 	  case "Temperature-on":
 	      var text = "a\r";
+	  break;
+          case "All-off":
+		alert("All-off not set");
+	      //var text = "9\r";
+	  break;
+	  case "All-on":
+		alert("All-on not set");
+	      //var text = "a\r";
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ alert("Success Command: "+text); }, function(){ alert("Failed Command: "+text); });
