@@ -241,30 +241,28 @@
 		$(this.el).unbind("vclick");
 	},
         events: {
-		'vclick #sensor' : 'showSensor'
+		'vclick .ui-btn-text' : 'showSensor'
 	},
         showSensor: function(e){
 		e.preventDefault();
 		// old not used - $(event.target).attr('class') gets ui-flipswitch-off when clicking off
-		//var id = $(e.target).data("id");
-		/* get id of flipswitch that was clicked and its value(on/off) */
+		// old not used - $(e.target).data("id") / $(event.target).parent()
+		/* get id of button clicked - eg. Color */
 		var id = $(e.currentTarget).data("id");
-		var idVal = $('#'+id+'').val();
-		var idSubmit = id + "-" + idVal;
-		$("#sensor").slider("refresh");
-		//$("#"+ id +"").val('"+ idVal +"').slider("refresh");
-		//if(idVal == "off"){
-		//alert("Run blueOff id: "+ id);
-		app.blueOnOff(idSubmit);
-		//} else {
-		//	alert("Run blueOn id: "+ id);
-		//	app.blueOn(id);
-		//}
-		//myparent = $(event.target).parent();
-		//alert(myparent.id);
-		//var id = $(e.currentTarget).data("id");
-		//alert("showAction: "+id);
-                //app.blueControl(id);
+		/* get text of button clicked - eg. Color-off */
+		var idGet = ($("#"+id+"").text());
+		/* split button text */
+		splitID = idGet.split('-');
+		/* send text of button off to blueOnOff for further processing */ 
+		app.blueOnOff(idGet);
+		/* set text of button to opposite */
+		if(splitID[1] == "Off"){
+			($("#"+id+"").text(""+ splitID[0] +"-On"));
+		} else {
+			($("#"+id+"").text(""+ splitID[0] +"-Off"));
+		}
+		//alert(splitID[0]);
+		//alert(splitID[1]);
 	},
 	render: function(eventName){
 		$(this.el).append(this.template(this.model.toJSON()));
@@ -452,6 +450,8 @@ var app = {
         switch(e) {
           case "Color-off":
 	      var text = "b\r";
+	      //$("#Color").text("Color-on");
+	      //$("#Color").changeButtonText("Color-on");
 	  break;
 	  case "Color-on":
 	      var text = "c\r";
@@ -829,8 +829,6 @@ var app = {
        $.mobile.linkBindingEnabled = false;
        $.mobile.hashListeningEnabled = false;
        $.mobile.pushStateEnabled = false;
-       $('#sensor').slider(); 
-       //$('#sensormenu').html(""); 
 	
 	app.bindEvents();
     	document.addEventListener("deviceready", app.onDeviceReady, true);

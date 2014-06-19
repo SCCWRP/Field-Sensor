@@ -4,6 +4,7 @@
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
+	"order": "a",
       	"id": "1"
   },
   {
@@ -11,6 +12,7 @@
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
+	"order": "b",
       	"id": "2"
   },
   {
@@ -18,6 +20,7 @@
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
+	"order": "c",
       	"id": "3"
   },
   {
@@ -25,6 +28,7 @@
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
+	"order": "a",
       	"id": "4"
   },
   {
@@ -32,6 +36,7 @@
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
+	"order": "b",
       	"id": "5"
   },
   {
@@ -39,6 +44,7 @@
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
+	"order": "c",
       	"id": "6"
   },
   {
@@ -46,6 +52,7 @@
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
+	"order": "a",
       	"id": "7"
   }
 ]
