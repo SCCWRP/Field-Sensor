@@ -241,8 +241,7 @@
 		$(this.el).unbind("vclick");
 	},
         events: {
-		//'vclick #sensor' : 'showSensor'
-		'tap #sensor' : 'showSensor'
+		'vclick #sensor' : 'showSensor'
 	},
         showSensor: function(e){
 		e.preventDefault();
@@ -252,6 +251,8 @@
 		var id = $(e.currentTarget).data("id");
 		var idVal = $('#'+id+'').val();
 		var idSubmit = id + "-" + idVal;
+		$("#sensor").slider("refresh");
+		//$("#"+ id +"").val('"+ idVal +"').slider("refresh");
 		//if(idVal == "off"){
 		//alert("Run blueOff id: "+ id);
 		app.blueOnOff(idSubmit);
@@ -828,6 +829,9 @@ var app = {
        $.mobile.linkBindingEnabled = false;
        $.mobile.hashListeningEnabled = false;
        $.mobile.pushStateEnabled = false;
+       $('#sensor').slider(); 
+       //$('#sensormenu').html(""); 
+	
 	app.bindEvents();
     	document.addEventListener("deviceready", app.onDeviceReady, true);
   }
