@@ -60,6 +60,7 @@
 		//var name = item.get("title");
 		//alert(name);
 		appRouter.navigate(id, true);
+		//$.mobile.changePage(id, { reverse: false, changeHash: false});
 		//alert(e.currentTarget);
     	},
     	addOne: function(c){
@@ -240,18 +241,29 @@
 		$(this.el).unbind("vclick");
 	},
         events: {
-		'vclick .ui-flipswitch' : 'showSensor'
+		//'vclick .ui-flipswitch' : 'showSensor'
+		'vclick #sensor' : 'showSensor'
 	},
         showSensor: function(e){
 		e.preventDefault();
-		//$(event.target).attr('class') gets ui-flipswitch-off when clicking off
-		var id = $(e.target).data("id");
-		//alert(id+" and "+$(event.target).attr('class'));
+		// old not used - $(event.target).attr('class') gets ui-flipswitch-off when clicking off
+		//var id = $(e.target).data("id");
+		/* get id of flipswitch that was clicked and its value(on/off) */
+		var id = $(e.currentTarget).data("id");
+		var idVal = $('#'+id+'').val();
+		var idSubmit = id + "-" + idVal;
+		//if(idVal == "off"){
+		//alert("Run blueOff id: "+ id);
+		app.blueOnOff(idSubmit);
+		//} else {
+		//	alert("Run blueOn id: "+ id);
+		//	app.blueOn(id);
+		//}
 		//myparent = $(event.target).parent();
 		//alert(myparent.id);
 		//var id = $(e.currentTarget).data("id");
 		//alert("showAction: "+id);
-                app.blueControl(id);
+                //app.blueControl(id);
 	},
 	render: function(eventName){
 		$(this.el).append(this.template(this.model.toJSON()));
@@ -260,6 +272,10 @@
 	}
   });
   var appRouter = new (Backbone.Router.extend({
+  navigate: function (url){
+	// override pushstate and load url
+	Backbone.history.loadUrl(url);
+  },
   routes: {
 	"action": "action",
 	"file": "file",
@@ -396,6 +412,7 @@ var app = {
 	    //alert("JSON: "+parsedJSON.id);	
 	    // save session key to key ring
 	    var sessionKey = "sensor-keys-" + app.SESSIONID + "-" + parsedJSON.id;
+	    alert(sessionKey);
 	    var keyStorage = window.localStorage.getItem("sensor-keys");
 	    if (keyStorage != null){
 			//alert("The following sessions are saved " + keyStorage);
@@ -422,7 +439,7 @@ var app = {
   },
   blueClear: function() {
 	    alert("Clear Arduino");
-	    var text = "c\r";
+	    var text = "z\r";
 	    bluetoothSerial.write(text, function(){ alert("Clear Arduino Succeeded"); }, function(){ alert("Clear Arduino Failed"); });
   },
   blueData: function() {
@@ -430,20 +447,46 @@ var app = {
 	    var text = "g\r";
 	    bluetoothSerial.write(text, function(){ alert("getData Succeeded"); }, function(){ alert("getData Failed"); });
   },
-  blueControl: function(e){
-	alert("blueControl: "+e);
-	var idSetting = e.split('-');
-	// split e variable on id - setting
-        switch(idSetting[1]) {
-          case "on":
-	      alert("On for: "+idSetting[0]);
-       	      //app.blueOn(id);
+  blueOnOff: function(e){
+        switch(e) {
+          case "Color-off":
+	      var text = "b\r";
 	  break;
-	  case "off":
-	      alert("Off for: "+idSetting[0]);
-       	      //app.blueOff(id);
+	  case "Color-on":
+	      var text = "c\r";
+	  break;
+          case "DO-off":
+	      var text = "5\r";
+	  break;
+	  case "DO-on":
+	      var text = "6\r";
+	  break;
+          case "EC-off":
+	      var text = "1\r";
+	  break;
+	  case "EC-on":
+	      var text = "2\r";
+	  break;
+          case "PH-off":
+	      var text = "7\r";
+	  break;
+	  case "PH-on":
+	      var text = "8\r";
+	  break;
+          case "ORP-off":
+	      var text = "3\r";
+	  break;
+	  case "ORP-on":
+	      var text = "4\r";
+	  break;
+          case "Temperature-off":
+	      var text = "9\r";
+	  break;
+	  case "Temperature-on":
+	      var text = "a\r";
 	  break;
 	}
+   	bluetoothSerial.write(text, function(){ alert("Success Command: "+text); }, function(){ alert("Failed Command: "+text); });
   },
   showError: function(error) {
         app.showContent(error);

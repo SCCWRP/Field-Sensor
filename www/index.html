@@ -38,11 +38,12 @@
 	<script type="text/template" id="sensor-template">
 	  <li><%= title %></li>
 	  <li>
-<div class="ui-flipswitch ui-shadow-inset ui-bar-inherit">
-  <span tabindex="1" data-id="<%= title %>-off" class="ui-flipswitch-on ui-btn ui-shadow ui-btn-inherit">On</span>
-  <span class="ui-flipswitch-off" data-id="<%= title %>-on">Off</span>
-  <input type="checkbox" data-role="flipswitch" data-id="<%= id %>" data-enhanced="true" data-corners="false" name="flip-checkbox" class="ui-flipswitch-input">
-</div>
+  <div name="sensor" id="sensor" data-id="<%= title %>">
+    <select name="<%= title %>" id="<%= title %>" data-role="flipswitch">
+	<option value="off">Off</option>
+	<option value="on">On</option>
+    </select>
+  </div>
 	  </li>
 	</script>
 	<script type="text/template" id="menu-template">
@@ -67,7 +68,7 @@
   <body onload="init();" class="ui-mobile-viewport ui-overlay-b">
     <div data-role="page" data-theme="b">
       <div data-role="content">
-	<h3><a href="index.html">Sensor App</a> - Version x.0.2.50</h3>
+	<h3><a href="index.html">Sensor App</a> - Version x.0.2.53</h3>
 	<div id="submenu" data-content-theme='b'></div>
 	<div data-role="fieldcontain"><ul id="sensormenu"></ul></div>
 	<div id="content" class="content"></div>
