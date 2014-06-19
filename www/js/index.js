@@ -448,49 +448,47 @@ var app = {
   },
   blueOnOff: function(e){
         switch(e) {
-          case "Color-off":
+          case "Color-Off":
 	      var text = "b\r";
-	      //$("#Color").text("Color-on");
-	      //$("#Color").changeButtonText("Color-on");
 	  break;
-	  case "Color-on":
+	  case "Color-On":
 	      var text = "c\r";
 	  break;
-          case "DO-off":
+          case "DO-Off":
 	      var text = "5\r";
 	  break;
-	  case "DO-on":
+	  case "DO-On":
 	      var text = "6\r";
 	  break;
-          case "EC-off":
+          case "EC-Off":
 	      var text = "1\r";
 	  break;
-	  case "EC-on":
+	  case "EC-On":
 	      var text = "2\r";
 	  break;
-          case "PH-off":
+          case "PH-Off":
 	      var text = "7\r";
 	  break;
-	  case "PH-on":
+	  case "PH-On":
 	      var text = "8\r";
 	  break;
-          case "ORP-off":
+          case "ORP-Off":
 	      var text = "3\r";
 	  break;
-	  case "ORP-on":
+	  case "ORP-On":
 	      var text = "4\r";
 	  break;
-          case "Temperature-off":
+          case "Temperature-Off":
 	      var text = "9\r";
 	  break;
-	  case "Temperature-on":
+	  case "Temperature-On":
 	      var text = "a\r";
 	  break;
-          case "All-off":
+          case "All-Off":
 		alert("All-off not set");
 	      //var text = "9\r";
 	  break;
-	  case "All-on":
+	  case "All-On":
 		alert("All-on not set");
 	      //var text = "a\r";
 	  break;
