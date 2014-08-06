@@ -390,7 +390,7 @@ var app = {
 	  //} 
 	  //if(data !== "Initializing SD card...Initializing SD card...initialization done."){
 	  //var dataType = typeof(data);
-	  //alert("Data: "+data);
+	  alert("Data: "+data);
 	    jsonString = data.replace(/\|/g, '');
 	  //alert("jsonString: "+jsonString);
 	    //var app.SESSIONID = +new Date;
