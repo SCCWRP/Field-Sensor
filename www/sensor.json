@@ -54,5 +54,13 @@
       	"status": "incomplete",
 	"order": "a",
       	"id": "7"
+  },
+  {
+  	"title": "Calibration",
+  	"action": "sensorControl",
+  	"type": "button",
+  	"status": "incomplete",
+  	"order": "m4",
+  	"id": "8"
   }
 ]
