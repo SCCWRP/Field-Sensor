@@ -1,9 +1,1 @@
-{
-    "lib": {
-        "www": {
-            "id": "org.sccwrp.sensor",
-            "version": "3.4.0",
-            "uri": "https://github.com/phonegap/phonegap-app-hello-world/archive/3.4.0.tar.gz"
-        }
-    }
-}
+{"lib":{"www":{"id":"phonegap","version":"1.0.0","uri":"https://github.com/andrewsccwrp/Sensor.git"}},"id":"org.sccwrp.shs","name":"Sensor","phonegap":{"id":1054770}}
