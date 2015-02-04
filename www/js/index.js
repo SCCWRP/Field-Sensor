@@ -490,11 +490,11 @@ var app = {
 	  case "All-On":
 	      var text = "e\r";
 	  break;
-	  case "Calibration-Off":
-	  	var text="F\r";
+	  case "PH 7 Calibration-Off":
+	  	var text="i\r";
 	  break;
-	  case "Calibration-On":
-	  	var text="G\r";
+	  case "PH 7 Calibration-On":
+	  	var text="c\r";
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ alert("Success Command: "+text); }, function(){ alert("Failed Command: "+text); });
