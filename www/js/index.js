@@ -490,16 +490,16 @@ var app = {
 	  case "All-On":
 	      var text = "e\r";
 	  break;
-	  case "PH-7-Calibration-Off":
+	  case "PH7Calibration-Off":
 	  	var text="0\r";
 	  break;
-	  case "PH-7-Calibration-On":
+	  case "PH7Calibration-On":
 	  	var text="c\r";
 	  break;
-	  case "PH-4-Calibration-Off":
+	  case "PH4Calibration-Off":
 		var text="0\r";
 	  break;
-	  case "PH-4-Calibration-On":
+	  case "PH4Calibration-On":
 		var text="0\r";
 	  break;
 	}
