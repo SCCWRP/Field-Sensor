@@ -490,12 +490,30 @@ var app = {
 	  case "All-On":
 	      var text = "e\r";
 	  break;
-	  case "ManualMode-On":
+	  case "M1-On":
+		var text = "m1\r";
+	  break;
+	  case "M1-Off":
+		var text = "Q\r";
+	  break;
+	  case "M2-On":
+		var text = "m2\r";
+	  break;
+	  case "M2-Off":
+		var text = "Q\r";
+	  break;
+	  case "M3-On":
+		var text = "m3\r";
+	  break;
+	  case "M3-Off":
+		var text = "Q\r";
+	  break;
+	  case "M4-On":
 		var text = "m4\r";
 	  break;
-	  case "ManualMode-Off":
+	  case "M4-Off":
 		var text = "Q\r";
-		break;
+	  break;
 	  case "PH7Cal-Off":
 	  	var text="0\r";
 	  break;

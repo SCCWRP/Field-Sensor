@@ -72,11 +72,35 @@
 	"id": "9"
   },
   {
-	"title": "ManualMode",
+	"title": "M1",
 	"action": "sensorControl",
 	"type": "button",
 	"status": "incomplete",
 	"order": "b",
-	"id": "10"
+	"id": "10",
+  },
+  {
+	"title": "M2",
+	"action": "sensorControl",
+	"type": "button",
+	"status": "incomplete",
+	"order": "a",
+	"id": "11",
+  },
+  {
+	"title": "M3",
+	"action": "sensorControl",
+	"type": "button",
+	"status": "incomplete",
+	"order": "b",
+	"id": "12",
+  }
+  {
+	"title": "M4",
+	"action": "sensorControl",
+	"type": "button",
+	"status": "incomplete",
+	"order": "b",
+	"id": "13",
   }
 ]
