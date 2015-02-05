@@ -526,6 +526,12 @@ var app = {
 	  case "PH4Cal-On":
 		var text="0\r";
 	  break;
+	  case "PHC-On":
+		var text="C,1\r";
+	  break;
+	  case "PHC-Off":
+		var text="C,0\r";
+	  break;
 	}
    	bluetoothSerial.write(text, function(){ alert("Success Command: "+text); }, function(){ alert("Failed Command: "+text); });
   },

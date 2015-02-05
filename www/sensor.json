@@ -77,7 +77,7 @@
 	"type": "button",
 	"status": "incomplete",
 	"order": "b",
-	"id": "10",
+	"id": "10"
   },
   {
 	"title": "M2",
@@ -85,7 +85,7 @@
 	"type": "button",
 	"status": "incomplete",
 	"order": "a",
-	"id": "11",
+	"id": "11"
   },
   {
 	"title": "M3",
@@ -93,7 +93,7 @@
 	"type": "button",
 	"status": "incomplete",
 	"order": "b",
-	"id": "12",
+	"id": "12"
   }
   {
 	"title": "M4",
@@ -101,6 +101,14 @@
 	"type": "button",
 	"status": "incomplete",
 	"order": "b",
-	"id": "13",
+	"id": "13"
+  },
+  {
+	"title": "PHC",
+	"action": "secnsorControl",
+	"type": "button",
+	"status": "incomplete",
+	"order": "b",
+	"id": "14"
   }
 ]
