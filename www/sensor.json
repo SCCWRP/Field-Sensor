@@ -94,13 +94,13 @@
 	"status": "incomplete",
 	"order": "b",
 	"id": "12"
-  }
+  },
   {
 	"title": "M4",
 	"action": "sensorControl",
 	"type": "button",
 	"status": "incomplete",
-	"order": "b",
+	"order": "a",
 	"id": "13"
   },
   {
