@@ -62,5 +62,13 @@
   	"status": "incomplete",
   	"order": "b",
   	"id": "8"
+  },
+  {
+	"title": "PH 4 Calibration",
+	"action": "sensorControl",
+	"type": "button",
+	"status": "incomplete",
+	"order": "b",
+	"id": "9"
   }
 ]

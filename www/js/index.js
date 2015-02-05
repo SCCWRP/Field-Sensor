@@ -491,10 +491,16 @@ var app = {
 	      var text = "e\r";
 	  break;
 	  case "PH 7 Calibration-Off":
-	  	var text="i\r";
+	  	var text="0\r";
 	  break;
 	  case "PH 7 Calibration-On":
 	  	var text="c\r";
+	  break;
+	  case "PH 4 Calibration-Off":
+		var text="0\r";
+	  break;
+	  case "PH 4 Calibration-On":
+		var text="0\r";
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ alert("Success Command: "+text); }, function(){ alert("Failed Command: "+text); });
