@@ -56,11 +56,11 @@
       	"id": "7"
   },
   {
-  	"title": "Calibration",
+  	"title": "PH 7 Calibration",
   	"action": "sensorControl",
   	"type": "button",
   	"status": "incomplete",
-  	"order": "m4",
+  	"order": "b",
   	"id": "8"
   }
 ]
