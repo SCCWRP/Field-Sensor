@@ -490,16 +490,22 @@ var app = {
 	  case "All-On":
 	      var text = "e\r";
 	  break;
-	  case "PH7Calibration-Off":
+	  case "ManualMode-On":
+		var text = "m4\r";
+	  break;
+	  case "ManualMode-Off":
+		var text = "Q\r";
+		break;
+	  case "PH7Cal-Off":
 	  	var text="0\r";
 	  break;
-	  case "PH7Calibration-On":
+	  case "PH7Cal-On":
 	  	var text="c\r";
 	  break;
-	  case "PH4Calibration-Off":
+	  case "PH4Cal-Off":
 		var text="0\r";
 	  break;
-	  case "PH4Calibration-On":
+	  case "PH4Cal-On":
 		var text="0\r";
 	  break;
 	}

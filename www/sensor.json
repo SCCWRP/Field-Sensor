@@ -56,7 +56,7 @@
       	"id": "7"
   },
   {
-  	"title": "PH7Calibration",
+  	"title": "PH7Cal",
   	"action": "sensorControl",
   	"type": "button",
   	"status": "incomplete",
@@ -64,11 +64,19 @@
   	"id": "8"
   },
   {
-	"title": "PH4Calibration",
+	"title": "PH4Cal",
 	"action": "sensorControl",
 	"type": "button",
 	"status": "incomplete",
 	"order": "a",
 	"id": "9"
+  },
+  {
+	"title": "ManualMode",
+	"action": "sensorControl",
+	"type": "button",
+	"status": "incomplete",
+	"order": "b",
+	"id": "10",
   }
 ]
