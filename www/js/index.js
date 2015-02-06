@@ -255,6 +255,7 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing */ 
 		app.blueOnOff(idGet);
+		i=0;
 		while (i < 10) {
     		i++;
 		alert(i);
