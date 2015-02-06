@@ -511,10 +511,10 @@ var app = {
 		var text = "Q\r";
 	  break;
 	  case "M4-On":
-		var text = "m4\r";
+		var text = "Q\r";
 	  break;
 	  case "M4-Off":
-		var text = "Q\r";
+		var text = "m4\r";
 	  break;
 	  case "PH7Cal-Off":
 	  	var text="0\r";
@@ -529,10 +529,10 @@ var app = {
 		var text="0\r";
 	  break;
 	  case "PHC-On":
-		var text="C,1\r";
+		var text="C,0\r";
 	  break;
 	  case "PHC-Off":
-		var text="C,0\r";
+		var text="C,1\r";
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ alert("Success Command: "+text); }, function(){ alert("Failed Command: "+text); });
