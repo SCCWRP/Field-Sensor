@@ -539,9 +539,12 @@ var app = {
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ alert("Success Command: "+text); }, function(){ alert("Failed Command: "+text); });
+<<<<<<< HEAD
 	//bluetoothSerial.read(function (data) {
 	//	console.log(data);
 	//}, failure);
+=======
+>>>>>>> parent of 7442a6c... Serial Monitor Test on index.js
   },
   showError: function(error) {
         app.showContent(error);
