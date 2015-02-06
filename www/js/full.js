@@ -59,7 +59,10 @@ var SensorListView = Backbone.View.extend({
 		$(this.el).html("");
 		this.collection.forEach(this.addOne, this);
 <<<<<<< HEAD
+<<<<<<< HEAD
 		//bluetoothSerial.readUntil('\r', success, failure);	
+=======
+>>>>>>> parent of 89ce347... Serial Monitor Test on full.js
 =======
 >>>>>>> parent of 89ce347... Serial Monitor Test on full.js
 	}
