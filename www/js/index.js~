@@ -534,11 +534,11 @@ var app = {
 	  case "PHC-Off":
 		var text="C,1\r";
 		while (i < 10) {
-    		wer += "The number is " + i;
+    		var wer = "The number is " + i;
 		alert(wer);
     		i++;
 		}
-		break;
+	  break;
 	}
    	bluetoothSerial.write(text, function(){ alert("Success Command: "+text); }, function(){ alert("Failed Command: "+text); });
   },

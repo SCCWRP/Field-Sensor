@@ -532,12 +532,7 @@ var app = {
 		var text="C,0\r";
 	  break;
 	  case "PHC-Off":
-		var text="C,1\r";
-		while (i < 10) {
-    		var wer = "The number is " + i;
-		alert(wer);
-    		i++;
-		}
+		var text="C,1\r";	
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ alert("Success Command: "+text); }, function(){ alert("Failed Command: "+text); });
