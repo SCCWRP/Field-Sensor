@@ -408,12 +408,12 @@ var app = {
         // set up a listener to listen for newlines
         // and display any new data that's come in since
         // the last newline:
-	// working code doesn't require delimiter
+	/* working code doesn't require delimiter
 	bluetoothSerial.read(function (data) {
 		alert(data);
 		app.display(data);
 	}, function(){ alert("read Failed"); });
-	
+	*/	
 	var dataString;
         bluetoothSerial.subscribe(':', function (data) {
 	    var SESSIONID = +new Date;
@@ -436,9 +436,9 @@ var app = {
 		// add data to session key
 		window.localStorage.setItem(SESSIONID, data);
         }, app.showError);
-	bluetoothSerial.read(function (rdata){
-		app.display(rdata);
-        });
+	//bluetoothSerial.read(function (rdata){
+	//	app.display(rdata);
+        //});
     },
 
 /*
