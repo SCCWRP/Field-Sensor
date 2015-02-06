@@ -255,7 +255,11 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing */ 
 		app.blueOnOff(idGet);
-		alert(idGet);
+		bluetoothSerial.read(function (data) {
+    			console.log(data);
+		}, failure);
+		
+
 		/* set text of button to opposite */
 		if(splitID[1] == "Off"){
 			($("#"+id+"").text(""+ splitID[0] +"-On"));
