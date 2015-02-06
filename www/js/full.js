@@ -58,17 +58,6 @@ var SensorListView = Backbone.View.extend({
                 // clear current stage
 		$(this.el).html("");
 		this.collection.forEach(this.addOne, this);
-<<<<<<< HEAD
-		/*
-<<<<<<< HEAD
-<<<<<<< HEAD
-		//bluetoothSerial.readUntil('\r', success, failure);	
-=======
->>>>>>> parent of 89ce347... Serial Monitor Test on full.js
-=======
->>>>>>> parent of 89ce347... Serial Monitor Test on full.js*/
-=======
->>>>>>> parent of 89ce347... Serial Monitor Test on full.js
 	}
 });
 var HomeListView = Backbone.View.extend({
@@ -446,9 +435,6 @@ var app = {
 		// add data to session key
 		window.localStorage.setItem(SESSIONID, data);
         }, app.showError);
-	//bluetoothSerial.read(function (rdata){
-	//	app.display(rdata);
-        //});
     },
 
 /*
