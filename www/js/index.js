@@ -255,6 +255,7 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing */ 
 		app.blueOnOff(idGet);
+		alert(idGet);
 		/* set text of button to opposite */
 		if(splitID[1] == "Off"){
 			($("#"+id+"").text(""+ splitID[0] +"-On"));
@@ -534,9 +535,9 @@ var app = {
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ alert("Success Command: "+text); }, function(){ alert("Failed Command: "+text); });
-	bluetoothSerial.read(function (data) {
-		console.log(data);
-	}, failure);
+	//bluetoothSerial.read(function (data) {
+	//	console.log(data);
+	//}, failure);
   },
   showError: function(error) {
         app.showContent(error);
