@@ -58,7 +58,7 @@ var SensorListView = Backbone.View.extend({
                 // clear current stage
 		$(this.el).html("");
 		this.collection.forEach(this.addOne, this);
-		bluetoothSerial.readUntil('\r', success, failure);	
+		//bluetoothSerial.readUntil('\r', success, failure);	
 	}
 });
 var HomeListView = Backbone.View.extend({
@@ -408,12 +408,12 @@ var app = {
         // set up a listener to listen for newlines
         // and display any new data that's come in since
         // the last newline:
-	/* working code doesn't require delimiter
+	// working code doesn't require delimiter
 	bluetoothSerial.read(function (data) {
 		alert(data);
 		app.display(data);
 	}, function(){ alert("read Failed"); });
-	*/
+	
 	var dataString;
         bluetoothSerial.subscribe(':', function (data) {
 	    var SESSIONID = +new Date;
