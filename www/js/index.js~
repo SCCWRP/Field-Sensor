@@ -255,6 +255,11 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing */ 
 		app.blueOnOff(idGet);
+		while (i < 10) {
+    		text += "The number is " + i;
+    		i++;
+		}
+		
 		
 
 		/* set text of button to opposite */
