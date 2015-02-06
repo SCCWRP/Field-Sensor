@@ -436,9 +436,9 @@ var app = {
 		// add data to session key
 		window.localStorage.setItem(SESSIONID, data);
         }, app.showError);
-	//bluetoothSerial.read(function (rdata){
-	//	app.display(rdata);
-        //});
+	bluetoothSerial.read(function (rdata){
+		app.display(rdata);
+        });
     },
 
 /*

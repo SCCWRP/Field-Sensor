@@ -58,7 +58,7 @@ var SensorListView = Backbone.View.extend({
                 // clear current stage
 		$(this.el).html("");
 		this.collection.forEach(this.addOne, this);
-		bluetoothSerial.readUntil('\r', success, failure);	
+		//bluetoothSerial.readUntil('\r', success, failure);	
 	}
 });
 var HomeListView = Backbone.View.extend({
@@ -436,9 +436,9 @@ var app = {
 		// add data to session key
 		window.localStorage.setItem(SESSIONID, data);
         }, app.showError);
-	//bluetoothSerial.read(function (rdata){
-	//	app.display(rdata);
-        //});
+	bluetoothSerial.read(function (rdata){
+		app.display(rdata);
+        });
     },
 
 /*
