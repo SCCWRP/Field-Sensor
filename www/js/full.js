@@ -58,6 +58,7 @@ var SensorListView = Backbone.View.extend({
                 // clear current stage
 		$(this.el).html("");
 		this.collection.forEach(this.addOne, this);
+<<<<<<< HEAD
 		/*
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +67,8 @@ var SensorListView = Backbone.View.extend({
 >>>>>>> parent of 89ce347... Serial Monitor Test on full.js
 =======
 >>>>>>> parent of 89ce347... Serial Monitor Test on full.js*/
+=======
+>>>>>>> parent of 89ce347... Serial Monitor Test on full.js
 	}
 });
 var HomeListView = Backbone.View.extend({
