@@ -256,7 +256,7 @@
 		/* send text of button off to blueOnOff for further processing */ 
 		app.blueOnOff(idGet);
 		bluetoothSerial.read(function (data) {
-    			console.log(data);
+    			alert(data);
 		}, failure);
 		
 
