@@ -534,8 +534,8 @@ var app = {
 	  case "PHC-Off":
 		var text="C,1\r";
 		while (i < 10) {
-    		text += "The number is " + i;
-		alert(text);
+    		wer += "The number is " + i;
+		alert(wer);
     		i++;
 		}
 		break;
