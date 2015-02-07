@@ -253,8 +253,12 @@
 		var idGet = ($("#"+id+"").text());
 		/* split button text */
 		splitID = idGet.split('-');
-		/* send text of button off to blueOnOff for further processing*/  
+		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
+		bluetoothSerial.read(function (wer) {
+			alert(wer);
+			app.display(wer);
+		}, function(){ alert("reai Failed"); });
 		/* set text of button to opposite */
 		if(splitID[1] == "Off"){
 			($("#"+id+"").text(""+ splitID[0] +"-On"));
@@ -536,11 +540,6 @@ var app = {
    	bluetoothSerial.write(text, function(){ 
 		alert("Success Command: "+text); 
 	}, function(){ alert("Failed Command: "+text); });
-	bluetoothSerial.read(function (wer) {
-		alert(wer);
-		app.display(wer);
-	}, function(){ alert("read Failed"); });
-	
   },
   showError: function(error) {
         app.showContent(error);
