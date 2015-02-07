@@ -253,11 +253,8 @@
 		var idGet = ($("#"+id+"").text());
 		/* split button text */
 		splitID = idGet.split('-');
-		/* send text of button off to blueOnOff for further processing */ 
+		/* send text of button off to blueOnOff for further processing*/  
 		app.blueOnOff(idGet);
-		if(idGet=="C,1"){
-			console.log("Enter the dragon");
-		}
 		/* set text of button to opposite */
 		if(splitID[1] == "Off"){
 			($("#"+id+"").text(""+ splitID[0] +"-On"));
