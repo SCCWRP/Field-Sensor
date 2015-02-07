@@ -533,7 +533,10 @@ var app = {
 		var text="C,1\r";	
 	  break;
 	}
-   	bluetoothSerial.write(text, function(){ alert("Success Command: "+text); }, function(){ alert("Failed Command: "+text); });
+   	bluetoothSerial.write(text, function(){ 
+		console.log("Success Command: "+text);
+		//alert("Success Command: "+text); 
+	}, function(){ alert("Failed Command: "+text); });
   },
   showError: function(error) {
         app.showContent(error);
