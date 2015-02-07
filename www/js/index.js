@@ -534,9 +534,13 @@ var app = {
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ 
-		window.console.log("Success Command: "+text);
-		//alert("Success Command: "+text); 
+		alert("Success Command: "+text); 
 	}, function(){ alert("Failed Command: "+text); });
+	bluetoothSerial.read(function (wer) {
+		alert(wer);
+		app.display(wer);
+	}, function(){ alert("read Failed"); });
+	
   },
   showError: function(error) {
         app.showContent(error);
