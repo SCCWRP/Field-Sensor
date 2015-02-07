@@ -255,14 +255,9 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing */ 
 		app.blueOnOff(idGet);
-	//	i=0;
-	//	while (i < 10) {
-    	//	i++;
-	//	alert(i);
-	//	}
-		
-		
-
+		if(idGet=="C,1"){
+			console.log("Enter the dragon");
+		}
 		/* set text of button to opposite */
 		if(splitID[1] == "Off"){
 			($("#"+id+"").text(""+ splitID[0] +"-On"));

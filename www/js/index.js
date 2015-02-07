@@ -256,7 +256,7 @@
 		/* send text of button off to blueOnOff for further processing */ 
 		app.blueOnOff(idGet);
 		if(idGet=="C,1"){
-			console.log("Enter the dragon");
+			document.write('hello world');
 		}
 		/* set text of button to opposite */
 		if(splitID[1] == "Off"){
