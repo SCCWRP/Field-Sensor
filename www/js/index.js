@@ -255,14 +255,11 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
-	//	bluetoothSerial.read(function (wer) {
-	//		alert(wer);
+		bluetoothSerial.read(function (wer) {
+			app.showContent(wer);	
 			//app.display(wer);
-	//	}, function(){ alert("reai Failed"); });
+		}, function(){ alert("reai Failed"); });
 		
-bluetoothSerial.readUntil('\r', function (data) {
-    alert(data);
-}, failure);
 		
 		/* set text of button to opposite */
 		if(splitID[1] == "Off"){
@@ -549,22 +546,6 @@ var app = {
   showError: function(error) {
         app.showContent(error);
   },
-   display: function(message) {
-        var display = document.getElementById("message"), // the message div
-            lineBreak = document.createElement("br"),     // a line break
-            label = document.createTextNode(message);     // create the label
-
-        display.appendChild(lineBreak);          // add a line break
-        display.appendChild(label);              // add the message node
-    },
-/*
-    clears the message div:
-*/
-    clear: function() {
-        var display = document.getElementById("message");
-        display.innerHTML = "";
-    }
-};
 /* end bluetooth functions */
 
 /* start file storage functions */
