@@ -258,7 +258,7 @@
 var textr = "";
     var i;
     for (i = 0; i < 5; i++) {
-        textr += "The number is " + i;
+        app.showContent(handle);
     }
 app.showContent(textr);		
 		bluetoothSerial.read(function (wer) {
@@ -539,9 +539,11 @@ var app = {
 	  break;
 	  case "PHC-On":
 		var text="C,0\r";
+		var handle="Exit the Dragon";
 	  break;
 	  case "PHC-Off":
 		var text="C,1\r";	
+		var handle="Enter the Dragon";
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ 
