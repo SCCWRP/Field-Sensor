@@ -258,7 +258,7 @@
 var textr = "";
     var i;
     for (i = 0; i < 5; i++) {
-        app.showContent(handle);
+	    app.showContent("Dragon");
     }
 app.showContent(textr);		
 		bluetoothSerial.read(function (wer) {
