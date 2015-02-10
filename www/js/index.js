@@ -255,12 +255,17 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
-var textr = "";
     var i;
     for (i = 0; i < 5; i++) {
 	    app.showContent("Dragon");
+		window.addEventListener('load', function(){ // on page load
+ 		document.body.addEventListener('touchstart', function(e){
+		alert(e.changedTouches[0].pageX) // alert pageX coordinate of touch point
+ }, false)
+ 
+}, false)
+	    
     }
-app.showContent(textr);		
 		bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	
 		}, function(){ alert("read Failed"); });
