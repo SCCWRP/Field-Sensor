@@ -255,6 +255,12 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
+var text = "";
+    var i;
+    for (i = 0; i < 5; i++) {
+        text += "The number is " + i + "<br>";
+    }
+		
 		bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	
 		}, function(){ alert("read Failed"); });
