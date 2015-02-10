@@ -257,8 +257,7 @@
 		app.blueOnOff(idGet);
 		bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	
-			//app.display(wer);
-		}, function(){ alert("reai Failed"); });
+		}, function(){ alert("read Failed"); });
 		
 		
 		/* set text of button to opposite */

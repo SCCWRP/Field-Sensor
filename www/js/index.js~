@@ -257,7 +257,6 @@
 		app.blueOnOff(idGet);
 		bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	
-			//app.display(wer);
 		}, function(){ alert("reai Failed"); });
 		
 		
