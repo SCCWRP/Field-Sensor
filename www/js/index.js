@@ -1,4 +1,5 @@
 /* interface */
+  var dragon=0;
   var Action = Backbone.Model.extend();
   var File = Backbone.Model.extend();
   var Home = Backbone.Model.extend();
@@ -255,14 +256,12 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
-    var i;
-    for (i = 0; i < 5; i++) {
-	    app.showContent("Dragon");
- }, false)
- 
-}, false)
-	    
-    }
+		if(dragon==1){
+			alert("Dragon is 1");
+		} else {
+			alert("Dragon is 0");
+		} 
+	}
 		bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	
 		}, function(){ alert("read Failed"); });
@@ -544,11 +543,11 @@ var app = {
 	  break;
 	  case "PHC-On":
 		var text="C,0\r";
-		var handle="Exit the Dragon";
+		dragon=0;
 	  break;
 	  case "PHC-Off":
 		var text="C,1\r";	
-		var handle="Enter the Dragon";
+		dragon=1;
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ 
