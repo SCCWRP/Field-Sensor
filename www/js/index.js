@@ -255,7 +255,10 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
-		alert(idGet);
+		
+		if(idGet=="PHC-Off"){
+			alert(idGet);
+		}
     //var i;
     //for (i = 0; i < 5; i++) {
 	//    app.showContent("Dragon");
