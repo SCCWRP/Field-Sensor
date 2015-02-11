@@ -257,7 +257,10 @@
 		app.blueOnOff(idGet);
 		
 		while(idGet=="PHC-Off"){
-			alert(idGet);
+		//	alert(idGet);
+			bluetoothSerial.read(function (wer) {
+			app.showContent(wer);	
+			}, function(){ alert("read Failed"); });
 		}
     //var i;
     //for (i = 0; i < 5; i++) {
@@ -268,9 +271,7 @@
 	//	document.addEventListener("touchstart", function(){
     	//		alert("touchstart event");});
     //}
-		bluetoothSerial.read(function (wer) {
-			app.showContent(wer);	
-		}, function(){ alert("read Failed"); });
+		
 		
 		
 		/* set text of button to opposite */
