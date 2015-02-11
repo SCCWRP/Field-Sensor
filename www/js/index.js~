@@ -343,7 +343,7 @@ var app = {
     return document.querySelector(id);
   },
   bindEvents: function(){
-    //app.getId("#blueConnect").addEventListener("touchstart",app.blueConnect);         
+    app.getId("#blueConnect").addEventListener("touchstart",app.blueConnect);         
     //app.getId("#blueData").addEventListener("touchstart",app.blueData);         
     //app.getId("#clearDataButton").addEventListener("click",app.clearLocalData);         
     //app.getId("#fileCreateButton").addEventListener("touchstart",app.fileCreate);            
