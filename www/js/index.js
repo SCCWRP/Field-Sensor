@@ -258,6 +258,9 @@
     var i;
     for (i = 0; i < 5; i++) {
 	    app.showContent("Dragon");
+		window.addEventListener('load', function(){ // on page load
+ 		document.body.addEventListener('touchstart', function(e){
+		alert(e.changedTouches[0].pageX) // alert pageX coordinate of touch point
  }, false)
  
 }, false)
@@ -343,7 +346,6 @@ var app = {
     return document.querySelector(id);
   },
   bindEvents: function(){
-    //app.getId("#content").addEventListener("touchstart",app.contentTest); 
     //app.getId("#blueConnect").addEventListener("touchstart",app.blueConnect);         
     //app.getId("#blueData").addEventListener("touchstart",app.blueData);         
     //app.getId("#clearDataButton").addEventListener("click",app.clearLocalData);         
@@ -367,7 +369,7 @@ var app = {
   showContent: function(s) {
     app.getId("#content").innerHTML += s;
   },
-  
+
 /* start bluetooth functions */
   blueConnect: function() {
 	alert("blueConnect");
