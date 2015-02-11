@@ -257,6 +257,8 @@
 		app.blueOnOff(idGet);
 		
 		while(idGet=="PHC-Off"){
+			document.addEventListener("touchstart", function(){
+    			idGet="PHC-On";});
 		//	alert(idGet);
 			bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	
