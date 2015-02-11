@@ -258,13 +258,11 @@
     var i;
     for (i = 0; i < 5; i++) {
 	    app.showContent("Dragon");
-		window.addEventListener('load', function(){ // on page load
- 		document.body.addEventListener('touchstart', function(e){
-		alert(e.changedTouches[0].pageX) // alert pageX coordinate of touch point
- }, false)
- 
-}, false)
-	    
+		//window.addEventListener('load', function(){ // on page load
+ 		//document.body.addEventListener('touchstart', function(e){
+		//alert(e.changedTouches[0].pageX)}, false)}, false)
+		document.addEventListener("click", function(){
+    		document.getElementById("demo").innerHTML = "Hello World";});
     }
 		bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	
