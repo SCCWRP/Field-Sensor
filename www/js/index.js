@@ -1,5 +1,4 @@
 /* interface */
-  var dragon=0;
   var Action = Backbone.Model.extend();
   var File = Backbone.Model.extend();
   var Home = Backbone.Model.extend();
@@ -368,9 +367,7 @@ var app = {
   showContent: function(s) {
     app.getId("#content").innerHTML += s;
   },
-  contentTest: function(s) {
-    alert("contentTest");
-  },
+  
 /* start bluetooth functions */
   blueConnect: function() {
 	alert("blueConnect");
@@ -545,11 +542,11 @@ var app = {
 	  break;
 	  case "PHC-On":
 		var text="C,0\r";
-		dragon=0;
+		var handle="Exit the Dragon";
 	  break;
 	  case "PHC-Off":
 		var text="C,1\r";	
-		dragon=1;
+		var handle="Enter the Dragon";
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ 
