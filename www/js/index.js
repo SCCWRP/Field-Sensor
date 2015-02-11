@@ -258,7 +258,7 @@
 var textr = "";
     var i;
     for (i = 0; i < 5; i++) {
-	    app.showContent("Dragon");
+	    app.showContent("Dude");
 	//	window.addEventListener('load', function(){ // on page load
  	//	document.body.addEventListener('touchstart', function(e){
 	//	alert(e.changedTouches[0].pageX) // alert pageX coordinate of touch point
