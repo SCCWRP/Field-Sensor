@@ -259,17 +259,13 @@ var textr = "";
     var i;
     for (i = 0; i < 5; i++) {
 	    app.showContent("Dragon");
-<<<<<<< HEAD
 	//	window.addEventListener('load', function(){ // on page load
  	//	document.body.addEventListener('touchstart', function(e){
 	//	alert(e.changedTouches[0].pageX) // alert pageX coordinate of touch point
  }, false)
  
 }, false)
-	    
-=======
->>>>>>> parent of 03bf7de... testing content display in index.js
-    }
+
 app.showContent(textr);		
 		bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	
@@ -351,7 +347,7 @@ var app = {
     return document.querySelector(id);
   },
   bindEvents: function(){
-    app.getId("#blueConnect").addEventListener("touchstart",app.testConnect);         
+    //app.getId("#blueConnect").addEventListener("touchstart",app.testConnect);         
     //app.getId("#blueData").addEventListener("touchstart",app.blueData);         
     //app.getId("#clearDataButton").addEventListener("click",app.clearLocalData);         
     //app.getId("#fileCreateButton").addEventListener("touchstart",app.fileCreate);            
@@ -374,9 +370,9 @@ var app = {
   showContent: function(s) {
     app.getId("#content").innerHTML += s;
   },
-  testContent: function(s) {
-    alert("Touchtest");
-  },
+  //testContent: function(s) {
+    //alert("Touchtest");
+  //},
 
 /* start bluetooth functions */
   blueConnect: function() {
