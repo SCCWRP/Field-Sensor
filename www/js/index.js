@@ -343,7 +343,7 @@ var app = {
     return document.querySelector(id);
   },
   bindEvents: function(){
-    app.getId("#content").addEventListener("touchstart",app.contentTest); 
+    //app.getId("#content").addEventListener("touchstart",app.contentTest); 
     //app.getId("#blueConnect").addEventListener("touchstart",app.blueConnect);         
     //app.getId("#blueData").addEventListener("touchstart",app.blueData);         
     //app.getId("#clearDataButton").addEventListener("click",app.clearLocalData);         

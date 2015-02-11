@@ -343,7 +343,8 @@ var app = {
     return document.querySelector(id);
   },
   bindEvents: function(){
-    app.getId("#blueConnect").addEventListener("touchstart",app.blueConnect);         
+    app.getId("#content").addEventListener("touchstart",app.contentTest); 
+    //app.getId("#blueConnect").addEventListener("touchstart",app.blueConnect);         
     //app.getId("#blueData").addEventListener("touchstart",app.blueData);         
     //app.getId("#clearDataButton").addEventListener("click",app.clearLocalData);         
     //app.getId("#fileCreateButton").addEventListener("touchstart",app.fileCreate);            
@@ -366,7 +367,9 @@ var app = {
   showContent: function(s) {
     app.getId("#content").innerHTML += s;
   },
-
+  contentTest: function(s) {
+    alert("contentTest");
+  },
 /* start bluetooth functions */
   blueConnect: function() {
 	alert("blueConnect");
