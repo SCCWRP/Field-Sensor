@@ -256,7 +256,7 @@
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
 		
-		if(idGet=="PHC-Off"){
+		while(idGet=="PHC-Off"){
 			alert(idGet);
 		}
     //var i;
