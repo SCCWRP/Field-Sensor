@@ -256,12 +256,14 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
-		if(dragon==1){
-			alert("Dragon is 1");
-		} else {
-			alert("Dragon is 0");
-		} 
-	}
+    var i;
+    for (i = 0; i < 5; i++) {
+	    app.showContent("Dragon");
+ }, false)
+ 
+}, false)
+	    
+    }
 		bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	
 		}, function(){ alert("read Failed"); });
