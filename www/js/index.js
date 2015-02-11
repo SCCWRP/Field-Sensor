@@ -262,7 +262,7 @@
  		//document.body.addEventListener('touchstart', function(e){
 		//alert(e.changedTouches[0].pageX)}, false)}, false)
 		document.addEventListener("touchstart", function(){
-    			aler("touchstart event");});
+    			alert("touchstart event");});
     }
 		bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	

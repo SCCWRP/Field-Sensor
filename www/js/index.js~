@@ -261,8 +261,8 @@
 		//window.addEventListener('load', function(){ // on page load
  		//document.body.addEventListener('touchstart', function(e){
 		//alert(e.changedTouches[0].pageX)}, false)}, false)
-		document.addEventListener("click", function(){
-    			aler("click event");});
+		document.addEventListener("touchstart", function(){
+    			aler("touchstart event");});
     }
 		bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	
