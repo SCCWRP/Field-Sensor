@@ -1,5 +1,4 @@
 /* interface */
-  boolean bval=true;
   var Action = Backbone.Model.extend();
   var File = Backbone.Model.extend();
   var Home = Backbone.Model.extend();
