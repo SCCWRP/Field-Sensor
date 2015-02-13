@@ -256,7 +256,6 @@
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
 		var bval=false;
-		//app.getId("#blueConnect").addEventListener("touchstart",app.blueConnect); 
 		document.addEventListener("touchstart",function(){
 			bval=true;
 		});
@@ -264,7 +263,7 @@
 			return bval;
 		}
 		while (idGet=="PHC-On");
-			if(checkForBval()==true){ break; }
+			if(checkForBval()==true){ idGet="PHC-Off" }
 			bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	
 			}, function(){ alert("read Failed"); });
