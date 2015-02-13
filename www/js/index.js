@@ -255,19 +255,19 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
-		var bval=false;
-		document.addEventListener("touchstart",function(){
-			bval=true;
-		});
-		function checkForBval(){
-			return bval;
-		}
-		while (idGet=="PHC-On");
-			if(checkForBval()==true){ idGet="PHC-Off" }
-			bluetoothSerial.read(function (wer) {
-			app.showContent(wer);	
-			}, function(){ alert("read Failed"); });
-		}	
+	//	var bval=false;
+	//	document.addEventListener("touchstart",function(){
+	//		bval=true;
+	//	});
+	//	function checkForBval(){
+	//		return bval;
+	//	}
+	//	while (idGet=="PHC-On");
+	//		if(checkForBval()==true){ idGet="PHC-Off" }
+	//		bluetoothSerial.read(function (wer) {
+	//		app.showContent(wer);	
+	//		}, function(){ alert("read Failed"); });
+	//	}	
 		
 		/* set text of button to opposite */
 		if(splitID[1] == "Off"){
