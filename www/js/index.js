@@ -263,11 +263,16 @@
 		function checkForBval(){
 			return bval;
 		}
-		while(bval==true && idGet=="PHC-on"){
+		do{
 			bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	
 			}, function(){ alert("read Failed"); });
-		}
+		} while ((bval==true) && (idGet=="PHC-On"));
+		//while(bval==true && idGet=="PHC-on"){
+		//	bluetoothSerial.read(function (wer) {
+	//		app.showContent(wer);	
+//			}, function(){ alert("read Failed"); });
+//		}
 	//	while(idGet=="PHC-On"){
 	//		document.addEventListener("touchstart", function(){
     	//		idGet="PHC-Off";});
