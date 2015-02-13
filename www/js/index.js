@@ -255,6 +255,19 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
+		var bval=false;
+		document.addEventListener("touchstart",function(){
+			bval=true;
+		});
+		function checkForBval(){
+			return bval;
+		}
+		var jedi=1;
+		while(jedi>0){
+			if (checkForBval()==true){
+				jedi=0;
+			} else { alert("Return of the Jedi"); }
+		}
 	//	while(idGet=="PHC-On"){
 	//		document.addEventListener("touchstart", function(){
     	//		idGet="PHC-Off";});
