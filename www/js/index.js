@@ -263,35 +263,12 @@
 		function checkForBval(){
 			return bval;
 		}
-		do{
+		while (idGet=="PHC-On");
+			if(checkForBval()==true){ break; }
 			bluetoothSerial.read(function (wer) {
 			app.showContent(wer);	
 			}, function(){ alert("read Failed"); });
-		} while ((bval==true) && (idGet=="PHC-On"));
-		//while(bval==true && idGet=="PHC-on"){
-		//	bluetoothSerial.read(function (wer) {
-	//		app.showContent(wer);	
-//			}, function(){ alert("read Failed"); });
-//		}
-	//	while(idGet=="PHC-On"){
-	//		document.addEventListener("touchstart", function(){
-    	//		idGet="PHC-Off";});
-		//	alert(idGet);
-	//		bluetoothSerial.read(function (wer) {
-	//		app.showContent(wer);	
-	//		}, function(){ alert("read Failed"); });
-	//	}
-    //var i;
-    //for (i = 0; i < 5; i++) {
-	//    app.showContent("Dragon");
-		//window.addEventListener('load', function(){ // on page load
- 		//document.body.addEventListener('touchstart', function(e){
-		//alert(e.changedTouches[0].pageX)}, false)}, false)
-	//	document.addEventListener("touchstart", function(){
-    	//		alert("touchstart event");});
-    //}
-		
-		
+		}	
 		
 		/* set text of button to opposite */
 		if(splitID[1] == "Off"){
