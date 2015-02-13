@@ -264,7 +264,9 @@
 			return bval;
 		}
 		while(bval==true && idGet=="PHC-on"){
-			app.showContent("Return of the Jedi");
+			bluetoothSerial.read(function (wer) {
+			app.showContent(wer);	
+			}, function(){ alert("read Failed"); });
 		}
 	//	while(idGet=="PHC-On"){
 	//		document.addEventListener("touchstart", function(){
