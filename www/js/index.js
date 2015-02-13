@@ -256,14 +256,14 @@
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
 		
-		while(idGet=="PHC-On"){
-			document.addEventListener("touchstart", function(){
-    			idGet="PHC-Off";});
+	//	while(idGet=="PHC-On"){
+	//		document.addEventListener("touchstart", function(){
+    	//		idGet="PHC-Off";});
 		//	alert(idGet);
-			bluetoothSerial.read(function (wer) {
-			app.showContent(wer);	
-			}, function(){ alert("read Failed"); });
-		}
+	//		bluetoothSerial.read(function (wer) {
+	//		app.showContent(wer);	
+	//		}, function(){ alert("read Failed"); });
+	//	}
     //var i;
     //for (i = 0; i < 5; i++) {
 	//    app.showContent("Dragon");
