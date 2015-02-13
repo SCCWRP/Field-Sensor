@@ -266,7 +266,7 @@
 		while(jedi>0){
 			if (checkForBval()==true){
 				jedi=0;
-			} else { alert("Return of the Jedi"); }
+			} else { app.showContent("Return of the Jedi"); }
 		}
 	//	while(idGet=="PHC-On"){
 	//		document.addEventListener("touchstart", function(){
