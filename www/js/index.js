@@ -255,7 +255,7 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
-		
+		document.addEventListener("touchstart",function(){ alert("Enter the Dragon");});
 	//	while(idGet=="PHC-On"){
 	//		document.addEventListener("touchstart", function(){
     	//		idGet="PHC-Off";});
