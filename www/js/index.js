@@ -257,13 +257,7 @@
 		app.blueOnOff(idGet);
 		if(idGet=="PHC-On"){var bval=true; }
 		else{var bval=false;}
-		if(bval=true){			
-			//bluetoothSerial.read(function(wer) {
-			//app.showContent(wer);
-			//}, function(){ alert("read Failed"); });
-			bluetoothSerial.write("r/r", function(){ 
-			alert("Success Command: r/r"); }, function(){ alert("Clear Arduino Failed"); });
-		}	
+			
 		/* set text of button to opposite */
 		if(splitID[1] == "Off"){
 			($("#"+id+"").text(""+ splitID[0] +"-On"));
@@ -414,7 +408,7 @@ var app = {
 	    // key structure - key ring [sessionid1],[sessionid2],[sessionid3]
 	    // points to stored data location [sessionid1][data to store]
 	    // add another session to the key ring
-	    //var randomNumber = Math.floor(Math.random()*100);
+	    // var randomNumber = Math.floor(Math.random()*100);
 	    // parse data string into json format
 	    var parsedJSON = JSON.parse(jsonString); 
 	    //alert("JSON: "+parsedJSON.id);	
@@ -432,6 +426,11 @@ var app = {
 	    // add data to session key
 	    window.localStorage.setItem(""+ sessionKey +"" , jsonString);
     	    var currentStorage = window.localStorage.getItem(""+ sessionKey +"");
+					
+			bluetoothSerial.read(function(wer) {
+			app.showContent(wer);
+			}, function(){ alert("read Failed"); });
+			
     	    //alert("currentStorage: "+ currentStorage);
         }, app.showError);
   },
