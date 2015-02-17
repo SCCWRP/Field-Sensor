@@ -256,7 +256,7 @@
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
 		if(idGet=="PHC-On"){
-			bluetoothSerial.read(function(wer)) {
+			bluetoothSerial.read(function(wer) {
 			app.showContent(wer);
 			}, function(){ alert("read Failed"); });
 		}
