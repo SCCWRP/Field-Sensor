@@ -370,9 +370,9 @@ var app = {
 
 /* start bluetooth functions */
   blueConnect: function() {
-	alert("blueConnect");
+	//alert("blueConnect");
         var connect = function () {
-	    alert(app.macAddress);
+	    //alert(app.macAddress);
             app.showContent("Attempting to connect. " +
              "Make sure the serial port is open on the target device.");
             //bluetoothSerial.connect(
@@ -425,7 +425,7 @@ var app = {
 	    //alert("JSON: "+parsedJSON.id);	
 	    // save session key to key ring
 	    var sessionKey = "sensor-keys-" + app.SESSIONID + "-" + parsedJSON.id;
-	    alert(sessionKey);
+	    //alert(sessionKey);
 	    var keyStorage = window.localStorage.getItem("sensor-keys");
 	    if (keyStorage != null){
 			//alert("The following sessions are saved " + keyStorage);
@@ -437,7 +437,7 @@ var app = {
 	    // add data to session key
 	    window.localStorage.setItem(""+ sessionKey +"" , jsonString);
     	    var currentStorage = window.localStorage.getItem(""+ sessionKey +"");
-    	    alert("currentStorage: "+ currentStorage);
+    	    //alert("currentStorage: "+ currentStorage);
         }, app.showError);
   },
   closePort: function(){
@@ -451,14 +451,18 @@ var app = {
         );
   },
   blueClear: function() {
-	    alert("Clear Arduino");
+	    //alert("Clear Arduino");
 	    var text = "z\r";
-	    bluetoothSerial.write(text, function(){ alert("Clear Arduino Succeeded"); }, function(){ alert("Clear Arduino Failed"); });
+	    bluetoothSerial.write(text, function(){ 
+	alert("Clear Arduino Succeeded"); 
+	}, function(){ alert("Clear Arduino Failed"); });
   },
   blueData: function() {
-	    alert("getData Initiated");
+	    //alert("getData Initiated");
 	    var text = "g\r";
-	    bluetoothSerial.write(text, function(){ alert("getData Succeeded"); }, function(){ alert("getData Failed"); });
+	    bluetoothSerial.write(text, function(){ 
+	//alert("getData Succeeded");
+		 }, function(){ alert("getData Failed"); });
   },
   blueOnOff: function(e){
         switch(e) {
@@ -712,15 +716,15 @@ var app = {
      //alert("t: "+t);
      var localSave;
      var prevStorage = window.localStorage.getItem("sensor-keys");
-      alert("prevStorage: "+prevStorage); 
+      //alert("prevStorage: "+prevStorage); 
      if (prevStorage != null){
-	     alert("The following session keys are saved " + prevStorage);
+	     //alert("The following session keys are saved " + prevStorage);
 	     var keysArray = prevStorage.split(',');
 	     //var connectionStatus = navigator.onLine ? 'online' : 'offline';
 	     //if(connectionStatus != "offline") {
 	     var currentKey; // currentKey = sessionid
 	     var loopNum=keysArray.length;
-	     alert("Should loop " + loopNum + " times");
+	     //alert("Should loop " + loopNum + " times");
 	     for(var i=0; i<loopNum; i++){
 		     //alert("Loop number " +  i + "");
 		     currentKey = keysArray.pop();
@@ -779,15 +783,15 @@ var app = {
       //rsubmit(s);
   },
   saveLocalData: function(){
-    alert("saveLocalData");
+    //alert("saveLocalData");
     fileSystem.root.getFile("test.txt", {create:true}, app.fileAppend, app.onError);
   },
   showLocalData: function(){
-    alert("showLocalData");
+    //alert("showLocalData");
     app.getLocalData("remote","save");
   },
   submitLocalData: function(){
-    alert("submitLocalData");
+    //alert("submitLocalData");
     app.getLocalData("remote","save");
   },
 /* end local storage */
@@ -857,7 +861,7 @@ var app = {
     alert("onError");
   },
   onDeviceReady: function() {
-    alert("onDeviceReady");
+    //alert("onDeviceReady");
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, app.onFSSuccess, app.onError);
     var listPorts = function() {
             bluetoothSerial.list(
