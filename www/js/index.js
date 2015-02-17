@@ -255,6 +255,11 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
+		if(idGet=="PHC-On"){
+			bluetoothSerial.read(function(wer)) {
+			app.showContent(wer);
+			}, function(){ alert("read Failed"); });
+		}
 	//	var bval=false;
 	//	document.addEventListener("touchstart",function(){
 	//		bval=true;
@@ -404,7 +409,7 @@ var app = {
 	  //} 
 	  //if(data !== "Initializing SD card...Initializing SD card...initialization done."){
 	  //var dataType = typeof(data);
-	  alert("Data: "+data);
+	  //alert("Data: "+data);
 	    jsonString = data.replace(/\|/g, '');
 	  //alert("jsonString: "+jsonString);
 	    //var app.SESSIONID = +new Date;
@@ -546,11 +551,9 @@ var app = {
 	  break;
 	  case "PHC-On":
 		var text="C,0\r";
-		var handle="Exit the Dragon";
 	  break;
 	  case "PHC-Off":
 		var text="C,1\r";	
-		var handle="Enter the Dragon";
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ 
