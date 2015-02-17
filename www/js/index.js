@@ -255,7 +255,9 @@
 		splitID = idGet.split('-');
 		/* send text of button off to blueOnOff for further processing*/ 		
 		app.blueOnOff(idGet);
-		if(idGet=="PHC-On"){
+		if(idGet=="PHC-On"){var bval=true; }
+		else{var bval=false;}
+		if(bval=true){			
 			bluetoothSerial.read(function(wer) {
 			app.showContent(wer);
 			}, function(){ alert("read Failed"); });
