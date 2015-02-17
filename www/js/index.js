@@ -426,13 +426,6 @@ var app = {
 	    // add data to session key
 	    window.localStorage.setItem(""+ sessionKey +"" , jsonString);
     	    var currentStorage = window.localStorage.getItem(""+ sessionKey +"");
-
-			bluetoothSerial.write("r/r");
-			
-			bluetoothSerial.read(function(wer) {
-			app.showContent(wer);
-			}, function(){ alert("read Failed"); });
-			
     	    //alert("currentStorage: "+ currentStorage);
         }, app.showError);
   },
