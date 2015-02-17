@@ -258,24 +258,12 @@
 		if(idGet=="PHC-On"){var bval=true; }
 		else{var bval=false;}
 		if(bval=true){			
-			bluetoothSerial.read(function(wer) {
-			app.showContent(wer);
-			}, function(){ alert("read Failed"); });
-		}
-	//	var bval=false;
-	//	document.addEventListener("touchstart",function(){
-	//		bval=true;
-	//	});
-	//	function checkForBval(){
-	//		return bval;
-	//	}
-	//	while (idGet=="PHC-On");
-	//		if(checkForBval()==true){ idGet="PHC-Off" }
-	//		bluetoothSerial.read(function (wer) {
-	//		app.showContent(wer);	
-	//		}, function(){ alert("read Failed"); });
-	//	}	
-		
+			//bluetoothSerial.read(function(wer) {
+			//app.showContent(wer);
+			//}, function(){ alert("read Failed"); });
+			bluetoothSerial.write("r/r", function(){ 
+			alert("Success Command: r/r"); }
+		}	
 		/* set text of button to opposite */
 		if(splitID[1] == "Off"){
 			($("#"+id+"").text(""+ splitID[0] +"-On"));
