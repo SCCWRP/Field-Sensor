@@ -262,7 +262,7 @@
 			//app.showContent(wer);
 			//}, function(){ alert("read Failed"); });
 			bluetoothSerial.write("r/r", function(){ 
-			alert("Success Command: r/r"); }
+			alert("Success Command: r/r"); }, function(){ alert("Clear Arduino Failed"); });
 		}	
 		/* set text of button to opposite */
 		if(splitID[1] == "Off"){
