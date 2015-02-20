@@ -351,10 +351,10 @@ var app = {
     //app.getGPS(); -- move to deviceREady
   },
   clearContent: function() {
-    app.getId("#content").innerHTML = "";
+    app.getId("#log").innerHTML = "";
   },
   showContent: function(s) {
-    app.getId("#content").innerHTML += s;
+    app.getId("#log").innerHTML += s;
   },
 
 /* start bluetooth functions */
@@ -725,14 +725,14 @@ var app = {
 		     }
 		     //alert("Read Session: "+ read);
 		     if(a=="remote"){
-			alert("read: "+read);
+			//alert("read: "+read);
 		     	app.submitRemote(read,currentTime[2]);
 		     }
 			     //to_submit = read.split(',');
 			     //n = oldKey.split('_')[1];
 	     }
 	     if(a=="local"){
-   		alert("a Save: ");
+   		//alert("a Save: ");
 		return localSave;
 	     }
 	     //window.localStorage.removeItem("sensor-keys");

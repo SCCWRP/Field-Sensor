@@ -14,8 +14,14 @@
 	<style type="text/css">
 	  .content { color: white; text-color: red;}
 	  #sensormenu { width: 50%; margin: 0 auto;}
-	</style>
-
+	  #log {
+	      border: 0 none white;
+	      overflow: hidden;
+	      padding: 0;
+	      outline: none;
+	      background-color: white;
+	      color: black;
+	      resize: none;
 	</style>
 	<script type="text/javascript" src="phonegap.js"></script>
 	<script type="text/template" id="action-template">
@@ -78,6 +84,7 @@
 	  </ul>
 	</div>
 	<div id="content" class="content"></div>
+	<textarea id="log" onkeyup="resizeTextarea('log')">Log</textarea>
 	
       </div> <!-- close content // -->
       <div data-role="footer" data-position="fixed" style="overflow:hidden;">
