@@ -351,10 +351,10 @@ var app = {
     //app.getGPS(); -- move to deviceREady
   },
   clearContent: function() {
-    app.getId("#log").innerHTML = "";
+    app.getId("#content").innerHTML = "";
   },
   showContent: function(s) {
-    app.getId("#log").innerHTML += s;
+    app.getId("#content").innerHTML += s;
   },
 
 /* start bluetooth functions */
@@ -403,7 +403,7 @@ var app = {
 	    //alert(jsonString.id);
 	    //alert(jsonString.ec);
 	    //alert("Before JSON: "+ dataString);
-            //app.showContent(jsonString);
+            app.showContent(jsonString);
 	    //alert(jsonString.id);
 	    // key structure - key ring [sessionid1],[sessionid2],[sessionid3]
 	    // points to stored data location [sessionid1][data to store]
