@@ -643,7 +643,7 @@ var app = {
 	//alert("dataSyncCheck captureid: "+ dc);
 	//alert("dataSyncCheck timestamp: "+ dt);
 	// if the record is in database remove local record
-	alert("dataSyncCheck");
+	//alert("dataSyncCheck");
         var url = 'http://data.sccwrp.org/sensor/check.php';
         message = $.ajax({
                 type: 'GET',
