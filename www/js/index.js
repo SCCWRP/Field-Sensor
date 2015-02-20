@@ -351,10 +351,10 @@ var app = {
     //app.getGPS(); -- move to deviceREady
   },
   clearContent: function() {
-    app.getId("#content").innerHTML = "";
+    app.getId("#log").innerHTML = "";
   },
   showContent: function(s) {
-    app.getId("#content").innerHTML += s;
+    app.getId("#log").innerHTML += s;
   },
 
 /* start bluetooth functions */
