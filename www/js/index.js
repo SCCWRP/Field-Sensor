@@ -659,25 +659,25 @@ var app = {
                 success: function(data) {
 			// first delete value
 			var currentRecord = "sensor-keys-"+ dt +"-"+ dc;
-			alert("Value to Delete: "+ currentRecord);
+			//alert("Value to Delete: "+ currentRecord);
         		window.localStorage.removeItem(currentRecord);
 			// second delete key from ring	
         		var prevStorage = window.localStorage.getItem("sensor-keys");
 			// not a good idea - remove current key ring
        			//window.localStorage.removeItem("sensor-keys");
         		if (prevStorage != null){
-	     			alert("Get Key Ring: " + prevStorage);
+	     			//alert("Get Key Ring: " + prevStorage);
 				// split key ring string into array
 	     			var keysArray = prevStorage.split(',');
-				alert("keysArray.length: "+ keysArray.length);
+				//alert("keysArray.length: "+ keysArray.length);
 				// find key we want to delete
 				var keyFind = keysArray.indexOf(currentRecord);
 				if(keyFind != -1){
-					alert("Key to Delete: "+ keyFind);
+					//alert("Key to Delete: "+ keyFind);
 					// remove key from ring
 					keysArray.splice(keyFind, 1);
 					if(keysArray.length == 0){
-						alert("keysArray is empty: "+ keysArray.length);
+						//alert("keysArray is empty: "+ keysArray.length);
      						window.localStorage.removeItem("sensor-keys");
 					} else {
 						var newRing = keysArray.join();
