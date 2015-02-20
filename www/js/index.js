@@ -1,4 +1,4 @@
-/* interface */
+﻿/* interface */
   var Action = Backbone.Model.extend();
   var File = Backbone.Model.extend();
   var Home = Backbone.Model.extend();
@@ -359,7 +359,7 @@ var app = {
 
 /* start bluetooth functions */
   blueConnect: function() {
-	//alert("blueConnect");
+	alert("blueConnect");
         var connect = function () {
 	    //alert(app.macAddress);
             app.showContent("Attempting to connect. " +
