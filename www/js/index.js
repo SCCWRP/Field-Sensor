@@ -536,8 +536,7 @@ var app = {
 	  	function secondCommand(){
 	  		bluetoothSerial.write(text2, function(){
 				app.showContent("Success Command: "+text2); 
-				bluetoothSerial.read(function (data) {
-					    alert(data);
+				bluetoothSerial.readUntil('\n',function (data) {
 					    app.showContent(data);
 				}, function(){ app.showContent("Failed to Read"); });
 			}, function(){ app.showContent("Failed Command: "+text2); });
@@ -730,8 +729,8 @@ var app = {
 	     var currentKey; // currentKey = sessionid
 	     var loopNum=keysArray.length;
 	     //alert("Should loop " + loopNum + " times");
-	     function loopRecords(keysArray,currentKey,loopNum){
-	       for(var i=0; i<loopNum; i++){
+	     for(var i=0; i<loopNum; i++){
+		setTimeout(function(){
 		     //alert("Loop number " +  i + "");
 		     currentKey = keysArray.pop();
 		     //alert("currentKey: "+currentKey);
@@ -749,9 +748,8 @@ var app = {
 		     }
 			     //to_submit = read.split(',');
 			     //n = oldKey.split('_')[1];
-	       }
+	       }, 5000);
 	     }
-	     setTimeout(loopRecords(keysArray,currentKey,loopNum), 1000);
 	     if(a=="local"){
    		//alert("a Save: ");
 		return localSave;
