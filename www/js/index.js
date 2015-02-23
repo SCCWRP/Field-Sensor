@@ -354,6 +354,7 @@ var app = {
     app.getId("#log").innerHTML = "";
   },
   showContent: function(s) {
+    app.clearContent();
     app.getId("#log").innerHTML += s;
   },
 
@@ -726,7 +727,7 @@ var app = {
 		     //alert("Read Session: "+ read);
 		     if(a=="remote"){
 			//alert("read: "+read);
-		     	app.submitRemote(read,currentTime[2]);
+		     	setTimeout(app.submitRemote(read,currentTime[2]), 1000);
 		     }
 			     //to_submit = read.split(',');
 			     //n = oldKey.split('_')[1];
@@ -763,7 +764,7 @@ var app = {
 			app.dataSyncCheck(data.autoid,data.captureid,data.apptime);
 		},
 		complete: function(data) {
-			//alert("complete:"+data.key);
+			app.showContent("submitted: "+data.key);
 	        }
     	});
       //} 

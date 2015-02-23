@@ -40,5 +40,40 @@
       	"type": "button",
       	"status": "incomplete",
       	"id": "6"
+  },
+  {
+	"title": "Clear Local DB",
+	"action": "clearLocalData",
+      	"type": "button",
+      	"status": "incomplete",
+      	"id": "7"
+  },
+  {
+	"title": "Create Test File",
+	"action": "fileCreate",
+      	"type": "button",
+      	"status": "incomplete",
+      	"id": "8"
+  },
+  {
+	"title": "Show Local DB",
+	"action": "showLocalData",
+      	"type": "button",
+      	"status": "incomplete",
+      	"id": "9"
+  },
+  {
+	"title": "Show File Directory",
+	"action": "fileDirectoryListing",
+      	"type": "button",
+      	"status": "incomplete",
+      	"id": "10"
+  },
+  {
+	"title": "Upload File to SCCWRP",
+	"action": "uploadFile",
+      	"type": "button",
+      	"status": "incomplete",
+      	"id": "11"
   }
 ]

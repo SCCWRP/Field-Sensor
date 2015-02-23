@@ -1,6 +1,6 @@
 [
   {
-	"title": "Bluetooth",
+	"title": "Connect",
 	"url": "action",
       	"type": "button",
       	"status": "incomplete",
@@ -9,25 +9,25 @@
       	"id": "1"
   },
   {
-	"title": "Storage",
-	"url": "file",
-      	"type": "button",
-      	"status": "incomplete",
-	"order": "b",
-	"icon": "cloud",
-      	"id": "2"
-  },
-  {
-	"title": "Sensors",
+	"title": "Control",
 	"url": "sensor",
       	"type": "button",
       	"status": "incomplete",
-	"order": "c",
+	"order": "b",
 	"icon": "flask",
+      	"id": "2"
+  },
+  {
+	"title": "Transfer",
+	"url": "file",
+      	"type": "button",
+      	"status": "incomplete",
+	"order": "c",
+	"icon": "cloud",
       	"id": "3"
   },
   {
-	"title": "Miscellaneous",
+	"title": "Utilities",
 	"url": "misc",
       	"type": "button",
       	"status": "incomplete",

@@ -1,23 +1,16 @@
 [
   {
-	"title": "Bluetooth Connect",
+	"title": "Connect",
 	"action": "blueConnect",
       	"type": "button",
       	"status": "incomplete",
       	"id": "1"
   },
   {
-	"title": "Clear Data from Arduino",
-	"action": "blueClear",
-      	"type": "button",
-      	"status": "incomplete",
-      	"id": "2"
-  },
-  {
-	"title": "Get Data from Arduino",
+	"title": "Extract Data",
 	"action": "blueData",
       	"type": "button",
       	"status": "incomplete",
-      	"id": "3"
+      	"id": "2"
   }
 ]
