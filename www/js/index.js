@@ -527,14 +527,19 @@ var app = {
 	  break;
 	  case "PH7Cal-On":
 	  	function sendCommand(){
-	  		bluetoothSerial.write("m4\r", function(){
+			var text = "m4\r";
+	  		bluetoothSerial.write(text, function(){
 				app.showContent("Success Command: "+text); 
 			}, function(){ app.showContent("Failed Command: "+text); });
 		}
+			var text2 = "rcal,mid,7.00\r";
 	  	function secondCommand(){
-	  		bluetoothSerial.write("rcal,mid,7.00\r", function(){
-				app.showContent("Success Command: "+text); 
-			}, function(){ app.showContent("Failed Command: "+text); });
+	  		bluetoothSerial.write(text2, function(){
+				app.showContent("Success Command: "+text2); 
+				bluetoothSerial.read(function (data) {
+					    app.showContent(data);
+				}, function(){ app.showContent("Failed to Read"); });
+			}, function(){ app.showContent("Failed Command: "+text2); });
 		}
 		setTimeout(sendCommand, 3000);
 		setTimeout(secondCommand, 3000);
@@ -724,7 +729,8 @@ var app = {
 	     var currentKey; // currentKey = sessionid
 	     var loopNum=keysArray.length;
 	     //alert("Should loop " + loopNum + " times");
-	     for(var i=0; i<loopNum; i++){
+	     function loopRecords(keysArray,currentKey,loopNum){
+	       for(var i=0; i<loopNum; i++){
 		     //alert("Loop number " +  i + "");
 		     currentKey = keysArray.pop();
 		     //alert("currentKey: "+currentKey);
@@ -738,11 +744,13 @@ var app = {
 		     //alert("Read Session: "+ read);
 		     if(a=="remote"){
 			//alert("read: "+read);
-		     	setTimeout(app.submitRemote(read,currentTime[2]), 1000);
+		     	app.submitRemote(read,currentTime[2]);
 		     }
 			     //to_submit = read.split(',');
 			     //n = oldKey.split('_')[1];
+	       }
 	     }
+	     setTimeout(loopRecords(keysArray,currentKey,loopNum), 1000);
 	     if(a=="local"){
    		//alert("a Save: ");
 		return localSave;
