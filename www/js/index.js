@@ -536,7 +536,7 @@ var app = {
 	  	function secondCommand(){
 	  		bluetoothSerial.write(text2, function(){
 				app.showContent("Success Command: "+text2); 
-				bluetoothSerial.readUntil('\n',function (data) {
+				bluetoothSerial.subscribe('\n',function (data) {
 					    app.showContent(data);
 				}, function(){ app.showContent("Failed to Read"); });
 			}, function(){ app.showContent("Failed Command: "+text2); });
