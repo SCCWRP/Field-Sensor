@@ -523,7 +523,10 @@ var app = {
 		var text = "m4\r";
 	  break;
 	  case "PH7Cal-Off":
-	  	var text="0\r";
+	  	alert("PH7Cal-Off");
+		bluetoothSerial.unsubscribe(function (data) {
+			    app.showContent(data);
+		}, function(){ app.showContent("Failed to Unsubscribe"); });
 	  break;
 	  case "PH7Cal-On":
 	  	function sendCommand(){
