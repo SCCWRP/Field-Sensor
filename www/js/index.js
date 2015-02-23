@@ -526,7 +526,18 @@ var app = {
 	  	var text="0\r";
 	  break;
 	  case "PH7Cal-On":
-	  	var text="m4\rcal,mid,7.00\r";
+	  	function sendCommand(){
+	  		bluetoothSerial.write("m4\r", function(){
+				app.showContent("Success Command: "+text); 
+			}, function(){ app.showContent("Failed Command: "+text); });
+		}
+	  	function secondCommand(){
+	  		bluetoothSerial.write("rcal,mid,7.00\r", function(){
+				app.showContent("Success Command: "+text); 
+			}, function(){ app.showContent("Failed Command: "+text); });
+		}
+		setTimeout(sendCommand, 3000);
+		setTimeout(secondCommand, 3000);
 	  break;
 	  case "PH4Cal-Off":
 		var text="0\r";
@@ -762,11 +773,10 @@ var app = {
 			//alert("autoid:"+data.autoid);
 			//alert("captureid:"+data.captureid);
 			//alert("apptime:"+data.capturetime);
-			app.dataSyncCheck(data.autoid,data.captureid,data.apptime);
+			app.dataSyncCheck(data.id,data.capture_id,data.app_timestamp);
 		},
 		complete: function(data) {
-			app.showContent("Time: " + (new Date().getTime() - startTime) + "ms");
-			app.showContent("ID: "+data.captureid);
+			app.showContent("Time: " + (new Date().getTime() - startTime) + "ms" + " ID: "+data.capture_id);
 	        }
     	});
       //} 
