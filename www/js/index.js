@@ -449,7 +449,7 @@ var app = {
   },
   blueData: function() {
 	    //alert("getData Initiated");
-	    var text = "g\r";
+	    var text = "Q\rg\r";
 	    bluetoothSerial.write(text, function(){ 
 	//alert("getData Succeeded");
 		 }, function(){ alert("getData Failed"); });
@@ -537,12 +537,13 @@ var app = {
 	  		bluetoothSerial.write(text2, function(){
 				app.showContent("Success Command: "+text2); 
 				bluetoothSerial.read(function (data) {
+					    alert(data);
 					    app.showContent(data);
 				}, function(){ app.showContent("Failed to Read"); });
 			}, function(){ app.showContent("Failed Command: "+text2); });
 		}
-		setTimeout(sendCommand, 3000);
-		setTimeout(secondCommand, 3000);
+		setTimeout(sendCommand, 5000);
+		setTimeout(secondCommand, 5000);
 	  break;
 	  case "PH4Cal-Off":
 		var text="0\r";
