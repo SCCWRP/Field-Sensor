@@ -526,7 +526,7 @@ var app = {
 	  	var text="0\r";
 	  break;
 	  case "PH7Cal-On":
-	  	var text="c\r";
+	  	var text="m4\rcal,mid,7.00\r";
 	  break;
 	  case "PH4Cal-Off":
 		var text="0\r";
@@ -542,8 +542,8 @@ var app = {
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ 
-		alert("Success Command: "+text); 
-	}, function(){ alert("Failed Command: "+text); });
+		app.showContent("Success Command: "+text); 
+	}, function(){ app.showContent("Failed Command: "+text); });
   },
   showError: function(error) {
         app.showContent(error);
@@ -744,6 +744,7 @@ var app = {
   submitRemote: function(s,t){
      //alert("s:"+s);
      //function rsubmit(s){
+     	var startTime = new Date().getTime();
 	var url = 'http://data.sccwrp.org/sensor/load.php';
 	message = $.ajax({
 		type: 'GET',
@@ -764,7 +765,8 @@ var app = {
 			app.dataSyncCheck(data.autoid,data.captureid,data.apptime);
 		},
 		complete: function(data) {
-			app.showContent("submitted: "+data.key);
+			app.showContent("Time: " + (new Date().getTime() - startTime) + "ms");
+			app.showContent("ID: "+data.captureid);
 	        }
     	});
       //} 

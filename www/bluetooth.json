@@ -7,7 +7,7 @@
       	"id": "1"
   },
   {
-	"title": "Extract Data",
+	"title": "Collect",
 	"action": "blueData",
       	"type": "button",
       	"status": "incomplete",

@@ -15,13 +15,13 @@
 	  .content { color: white; text-color: red;}
 	  #sensormenu { width: 50%; margin: 0 auto;}
 	  #log {
+	      width: 100%;
+	      height: 300px;
 	      border: 0 none white;
-	      overflow: hidden;
 	      padding: 0;
 	      outline: none;
 	      background-color: white;
 	      color: black;
-	      resize: both;
       	  }
 	</style>
 	<script type="text/javascript" src="phonegap.js"></script>
@@ -85,7 +85,7 @@
 	  </ul>
 	</div>
 	<div id="content" class="content"></div>
-	<textarea id="log" onkeyup="resizeTextarea('log')">Log</textarea>
+	<textarea id="log" rows="4" cols="50" onkeyup="resizeTextarea('log')">Log</textarea>
 	
       </div> <!-- close content // -->
       <div data-role="footer" data-position="fixed" style="overflow:hidden;">

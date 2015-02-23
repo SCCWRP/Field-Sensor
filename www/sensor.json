@@ -46,5 +46,13 @@
       	"status": "incomplete",
 	"order": "b",
       	"id": "6"
+  },
+  {
+	"title": "PH7Cal",
+	"action": "sensorControl",
+      	"type": "button",
+      	"status": "incomplete",
+	"order": "b",
+      	"id": "7"
   }
 ]
