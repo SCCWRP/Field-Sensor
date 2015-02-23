@@ -1,6 +1,6 @@
 [
   {
-	"title": "Color",
+	"title": "PH",
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
@@ -8,7 +8,7 @@
       	"id": "1"
   },
   {
-	"title": "DO",
+	"title": "PH7Cal",
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
@@ -16,43 +16,19 @@
       	"id": "2"
   },
   {
-	"title": "EC",
+	"title": "PH4Cal",
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
-	"order": "a",
+	"order": "c",
       	"id": "3"
   },
   {
-	"title": "PH",
+	"title": "PH10Cal",
 	"action": "sensorControl",
       	"type": "button",
       	"status": "incomplete",
-	"order": "b",
+	"order": "d",
       	"id": "4"
-  },
-  {
-	"title": "ORP",
-	"action": "sensorControl",
-      	"type": "button",
-      	"status": "incomplete",
-	"order": "a",
-      	"id": "5"
-  },
-  {
-	"title": "Temperature",
-	"action": "sensorControl",
-      	"type": "button",
-      	"status": "incomplete",
-	"order": "b",
-      	"id": "6"
-  },
-  {
-	"title": "PH7Cal",
-	"action": "sensorControl",
-      	"type": "button",
-      	"status": "incomplete",
-	"order": "b",
-      	"id": "7"
   }
 ]

@@ -75,5 +75,12 @@
       	"type": "button",
       	"status": "incomplete",
       	"id": "11"
+  },
+  {
+	"title": "Save to SD",
+	"action": "saveLocalData",
+      	"type": "button",
+      	"status": "incomplete",
+      	"id": "12"
   }
 ]

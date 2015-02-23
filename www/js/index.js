@@ -475,10 +475,10 @@ var app = {
 	      var text = "2\r";
 	  break;
           case "PH-Off":
-	      var text = "7\r";
+	      var text = "C,0\r";
 	  break;
 	  case "PH-On":
-	      var text = "8\r";
+	      var text = "C,1\r";
 	  break;
           case "ORP-Off":
 	      var text = "3\r";
@@ -548,16 +548,54 @@ var app = {
 		setTimeout(secondCommand, 5000);
 	  break;
 	  case "PH4Cal-Off":
-		var text="0\r";
+	  	alert("PH4Cal-Off");
+		bluetoothSerial.unsubscribe(function (data) {
+			    app.showContent(data);
+		}, function(){ app.showContent("Failed to Unsubscribe"); });
 	  break;
 	  case "PH4Cal-On":
-		var text="0\r";
+	  	function sendCommand(){
+			var text = "m4\r";
+	  		bluetoothSerial.write(text, function(){
+				app.showContent("Success Command: "+text); 
+			}, function(){ app.showContent("Failed Command: "+text); });
+		}
+			var text2 = "rcal,low,4.00\r";
+	  	function secondCommand(){
+	  		bluetoothSerial.write(text2, function(){
+				app.showContent("Success Command: "+text2); 
+				bluetoothSerial.subscribe('\n',function (data) {
+					    app.showContent(data);
+				}, function(){ app.showContent("Failed to Read"); });
+			}, function(){ app.showContent("Failed Command: "+text2); });
+		}
+		setTimeout(sendCommand, 5000);
+		setTimeout(secondCommand, 5000);
 	  break;
-	  case "PHC-On":
-		var text="C,0\r";
+	  case "PH10Cal-Off":
+	  	alert("PH10Cal-Off");
+		bluetoothSerial.unsubscribe(function (data) {
+			    app.showContent(data);
+		}, function(){ app.showContent("Failed to Unsubscribe"); });
 	  break;
-	  case "PHC-Off":
-		var text="C,1\r";	
+	  case "PH10Cal-On":
+	  	function sendCommand(){
+			var text = "m4\r";
+	  		bluetoothSerial.write(text, function(){
+				app.showContent("Success Command: "+text); 
+			}, function(){ app.showContent("Failed Command: "+text); });
+		}
+			var text2 = "rcal,high,10.00\r";
+	  	function secondCommand(){
+	  		bluetoothSerial.write(text2, function(){
+				app.showContent("Success Command: "+text2); 
+				bluetoothSerial.subscribe('\n',function (data) {
+					    app.showContent(data);
+				}, function(){ app.showContent("Failed to Read"); });
+			}, function(){ app.showContent("Failed Command: "+text2); });
+		}
+		setTimeout(sendCommand, 5000);
+		setTimeout(secondCommand, 5000);
 	  break;
 	}
    	bluetoothSerial.write(text, function(){ 
@@ -734,7 +772,7 @@ var app = {
 	     //alert("Should loop " + loopNum + " times");
 	     for(var i=0; i<loopNum; i++){
 		setTimeout(function(){
-		     //alert("Loop number " +  i + "");
+		     alert("Loop number " +  i + "");
 		     currentKey = keysArray.pop();
 		     //alert("currentKey: "+currentKey);
 		     currentTime = currentKey.split('-');
@@ -751,7 +789,7 @@ var app = {
 		     }
 			     //to_submit = read.split(',');
 			     //n = oldKey.split('_')[1];
-	       }, 5000);
+	       }, 3000);
 	     }
 	     if(a=="local"){
    		//alert("a Save: ");

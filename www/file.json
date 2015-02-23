@@ -5,12 +5,5 @@
       	"type": "button",
       	"status": "incomplete",
       	"id": "1"
-  },
-  {
-	"title": "Save to SD",
-	"action": "saveLocalData",
-      	"type": "button",
-      	"status": "incomplete",
-      	"id": "2"
   }
 ]
