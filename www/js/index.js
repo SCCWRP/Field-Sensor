@@ -771,8 +771,7 @@ var app = {
 	     var loopNum=keysArray.length;
 	     //alert("Should loop " + loopNum + " times");
 	     for(var i=0; i<loopNum; i++){
-		setTimeout(function(){
-		     alert("Loop number " +  i + "");
+		     //alert("Loop number " +  i + "");
 		     currentKey = keysArray.pop();
 		     //alert("currentKey: "+currentKey);
 		     currentTime = currentKey.split('-');
@@ -784,12 +783,10 @@ var app = {
 		     }
 		     //alert("Read Session: "+ read);
 		     if(a=="remote"){
-			//alert("read: "+read);
 		     	app.submitRemote(read,currentTime[2]);
 		     }
 			     //to_submit = read.split(',');
 			     //n = oldKey.split('_')[1];
-	       }, 3000);
 	     }
 	     if(a=="local"){
    		//alert("a Save: ");
@@ -801,7 +798,7 @@ var app = {
 
   },
   submitRemote: function(s,t){
-     //alert("s:"+s);
+     alert("s:"+s);
      //function rsubmit(s){
      	var startTime = new Date().getTime();
 	var url = 'http://data.sccwrp.org/sensor/load.php';
@@ -817,8 +814,9 @@ var app = {
 			 if(t==="timeout"){ alert("Data not Submitted"); }
 		}, 
 		success: function(data) {
+			console.log("submitRemote: "+data);
 			//alert("status:"+data.submit);
-			//alert("autoid:"+data.autoid);
+			console.log("id:"+data.id);
 			//alert("captureid:"+data.captureid);
 			//alert("apptime:"+data.capturetime);
 			app.dataSyncCheck(data.id,data.capture_id,data.app_timestamp);
