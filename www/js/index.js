@@ -898,8 +898,9 @@ var app = {
     } else {
     	window.localStorage.setItem("sensor-keys","sensor-keys-"+ app.SESSIONID +"-1,sensor-keys-"+ app.SESSIONID +"-2");
     } 
-    window.localStorage.setItem('sensor-keys-'+ app.SESSIONID +'-1', '{"id":"1","time":"14:34:56","ph":"4.5","orp":"234","do":"4.7","ec":"211μs","temp":"89","color":"4.5","lat":"'+latitude+'","lon":"'+longitude+'"}');
-    window.localStorage.setItem('sensor-keys-'+ app.SESSIONID +'-2', '{"id":"2","time":"09:03:23","ph":"3.0","orp":"450","do":"5.9","ec":"123μs","temp":"85","color":"2.1","lat":"'+latitude+'","lon":"'+longitude+'"}');
+    //capture_id,capture_timestamp,ph,orp,do,ec,temp,color,lat,lon,app_timestamp
+    window.localStorage.setItem('sensor-keys-'+ app.SESSIONID +'-1', '{"capture_id":"1","capture_timestamp":"08:34:56","ph":"4.5","orp":"234","do":"4.7","ec":"211μs","temp":"89","color":"4.5","lat":"'+latitude+'","lon":"'+longitude+',"app_timestamp":"'+app.SESSIONID+'"}');
+    window.localStorage.setItem('sensor-keys-'+ app.SESSIONID +'-2', '{"capture_id":"2","capture_timestamp":"09:03:23","ph":"3.0","orp":"450","do":"5.9","ec":"123μs","temp":"85","color":"2.1","lat":"'+latitude+'","lon":"'+longitude+',"app_timestamp":"'+app.SESSIONID+'"}');
     var currentStorage = window.localStorage.getItem("sensor-keys");
     alert("Test pull on sensor-keys: "+ currentStorage);
   },
