@@ -777,23 +777,12 @@ var app = {
 		     currentTime = currentKey.split('-');
 		     //alert("currentTimestamp: "+currentTime[2]);
 		     var read =  window.localStorage.getItem(currentKey);
-		     if(a=="local"){
-     			//alert("a: "+a);
-			localSave += read;	
-		     }
-		     //alert("Read Session: "+ read);
-		     if(a=="remote"){
-		     	app.submitRemote(read,currentTime[2]);
-		     }
-			     //to_submit = read.split(',');
-			     //n = oldKey.split('_')[1];
+		     if(a=="local"){ localSave += read;	} 
+		     if(a=="remote"){ app.submitRemote(read,currentTime[2]); }
 	     }
 	     if(a=="local"){
-   		//alert("a Save: ");
 		return localSave;
 	     }
-	     //window.localStorage.removeItem("sensor-keys");
-	     //alert("Unable to submit data");
       }
 
   },
